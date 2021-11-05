@@ -1,10 +1,12 @@
 import './App.css';
-import RouterApp from './Components/RouterApp/RouterApp';
+import DogList from './Components/DogList/DogList';
+import Header from './Components/Header/Header';
 
 function App() {
 	return (
-		<div>
-			<RouterApp />
+		<div className='vh-100'>
+			<Header />
+			<DogList />
 		</div>
 	);
 }

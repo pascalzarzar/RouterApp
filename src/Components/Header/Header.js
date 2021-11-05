@@ -1,7 +1,7 @@
 const Header = () => {
 	return (
 		<header>
-			<nav class='navbar navbar-expand-lg navbar-light bg-light'>
+			<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
 				<div class='container'>
 					<a class='navbar-brand' href='#'>
 						DogRouter
@@ -33,7 +33,17 @@ const Header = () => {
 							</li>
 							<li class='nav-item'>
 								<a class='nav-link' href='#'>
-									Link
+									Hazel
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a class='nav-link' href='#'>
+									Tubby
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a class='nav-link' href='#'>
+									Whiskey
 								</a>
 							</li>
 						</ul>

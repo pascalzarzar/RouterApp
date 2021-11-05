@@ -1,0 +1,9 @@
+p {
+	letter-spacing: 7px;
+	border: none;
+}
+
+p:hover {
+	border-bottom: 5px solid black;
+	transition: border ease-in-ease-out 0.2s;
+}
