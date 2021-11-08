@@ -6,7 +6,7 @@ const DogImage = (props) => {
 			<img
 				className='rounded-circle shadow w-100 mb-3'
 				src={props.image}
-				alt='dog image'
+				alt='a dog'
 			/>
 			<p className='text-uppercase fs-5 fw-bold'>{props.dogName}</p>
 		</div>

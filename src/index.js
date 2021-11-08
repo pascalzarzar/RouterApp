@@ -8,10 +8,10 @@ import '@popperjs/core';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-	<React.StrictMode>
-		<BrowserRouter>
+	<BrowserRouter>
+		<React.StrictMode>
 			<App />
-		</BrowserRouter>
-	</React.StrictMode>,
+		</React.StrictMode>
+	</BrowserRouter>,
 	document.getElementById('root')
 );
