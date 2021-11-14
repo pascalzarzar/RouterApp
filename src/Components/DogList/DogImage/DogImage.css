@@ -1,9 +1,32 @@
-p {
+.dogImage img {
+	filter: grayscale();
+	transition: 0.4s all ease-in-out;
+	min-width:250px
+}
+
+.dogImage:hover img {
+	filter:none;
+}
+
+.dogImage p {
 	letter-spacing: 7px;
 	border: none;
 }
 
-p:hover {
-	border-bottom: 5px solid black;
-	transition: border ease-in-ease-out 0.2s;
+.dogImage p::after {
+	width: 0;
+	height: 4px;
+	display: block;
+	background-color: #fff;
+	content:'';
+	position:relative;
+	top:5px;
+	left:50%;
+	transition: left 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+		width 0.4s cubic-bezier(0.215, 0.061, 0.355, 1);
+}
+
+.dogImage:hover p::after {
+	width: 100%;
+	left: 0;
 }

@@ -1,11 +1,12 @@
+import dogsData  from '../../Assets/Data/Dogs'
+import { Link } from "react-router-dom";
+
 const Header = () => {
 	return (
 		<header>
 			<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
 				<div class='container'>
-					<a class='navbar-brand' href='#'>
-						DogRouter
-					</a>
+					<Link className='navbar-brand' to='/'>DogRouter</Link>
 					<button
 						class='navbar-toggler'
 						type='button'
@@ -22,30 +23,13 @@ const Header = () => {
 						id='navbarSupportedContent'
 					>
 						<ul class='navbar-nav me-auto mb-2 mb-lg-0'>
-							<li class='nav-item'>
-								<a
-									class='nav-link active'
-									aria-current='page'
-									href='#'
-								>
-									Home
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link' href='#'>
-									Hazel
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link' href='#'>
-									Tubby
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link' href='#'>
-									Whiskey
-								</a>
-							</li>
+							{ dogsData.map((dog) => {
+								return(
+									<li class='nav-item'>
+										<Link className='nav-link' to={`/${dog.name}`}>{dog.name}</Link>
+									</li>
+								)
+							})}
 						</ul>
 					</div>
 				</div>

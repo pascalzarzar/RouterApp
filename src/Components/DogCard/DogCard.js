@@ -1,29 +1,34 @@
+import dogsData from '../../Assets/Data/Dogs';
+import { Link, useParams } from 'react-router-dom';
 import './DogCard.css';
-import dog from '../../Assets/Images/hazel.jpg';
 
 const DogCard = () => {
+	
+	const params = useParams();
+
+	const data = dogsData.filter( dog => dog.name === params.dogName);
+	const dogData = data[0];
+
 	return (
-		<div class='card shadow'>
-			<img class='card-img-top' src={dog} alt='Card cap' />
-			<div class='card-body'>
-				<h5 class='card-title'>Whiskey</h5>
-				<p class='card-text'>
-					Some quick example text to build on the card title and make
-					up the bulk of the card's content.
-				</p>
-			</div>
-			<ul class='list-group list-group-flush'>
-				<li class='list-group-item'>Cras justo odio</li>
-				<li class='list-group-item'>Dapibus ac facilisis in</li>
-				<li class='list-group-item'>Vestibulum at eros</li>
-			</ul>
-			<div class='card-body'>
-				<a href='#' class='card-link'>
-					Card link
-				</a>
-				<a href='#' class='card-link'>
-					Another link
-				</a>
+		<div className='d-flex justify-content-center mt-5'>
+			<div className='dogCard card shadow w-25 h-50'>
+				<img className='card-img-top' src={dogData.src} alt='Card cap' />
+				<div className='card-body'>
+					<h5 className='card-title'>{dogData.name}</h5>
+					<p className='text-muted'>{dogData.age} age old</p>
+				</div>
+				<ul className='list-group list-group-flush'>
+					{dogData.facts.map((fact) => {
+						return <li className='list-group-item'>{fact}</li>;
+					})}
+				</ul>
+				<div className='card-body'>
+					<Link to='/'>
+						<button href='#' type='button' className='btn btn-primary'>
+							Go Back
+						</button>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

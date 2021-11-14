@@ -5,9 +5,9 @@ import DogImage from './DogImage/DogImage';
 
 const DogList = () => {
 	return (
-		<main className='container h-100 d-flex flex-column align-items-center'>
-			<h1 className='display-1 mt-5'>Click a Dog!</h1>
-			<div className='d-flex justify-content-between mt-5'>
+		<main className='container h-100 d-flex flex-column'>
+			<h1 className='display-1 mt-5 text-center'>Click a Dog!</h1>
+			<div className='d-flex flex-column flex-md-row align-items-center justify-content-between align-content-between mt-5'>
 				<DogImage image={whiskey} dogName='Whiskey' />
 				<DogImage image={hazel} dogName='Hazel' />
 				<DogImage image={tubby} dogName='Tubby' />

@@ -1,4 +1,3 @@
-import './App.css';
 import DogList from './Components/DogList/DogList';
 import Header from './Components/Header/Header';
 import { Route, Routes } from 'react-router-dom';
@@ -10,8 +9,8 @@ function App() {
 			<Header />
 			<Routes>
 				<Route exact path='/' element={<DogList />} />
+				<Route exact path='/:dogName' element= {<DogCard/>}/>
 			</Routes>
-			<DogCard />
 		</div>
 	);
 }

@@ -1,8 +1,13 @@
-const dogs = [
+import hazel from '../Images/hazel.jpg'
+import tubby from '../Images/tubby.jpg'
+import whiskey from '../Images/whiskey.jpg'
+
+const dogsData = [
+	
 	{
 		name: 'Whiskey',
 		age: 5,
-		src: whiskey,
+		src:`${whiskey}`,
 		facts: [
 			'Whiskey loves eating popcorn.',
 			'Whiskey is a terrible guard dog.',
@@ -12,7 +17,7 @@ const dogs = [
 	{
 		name: 'Hazel',
 		age: 3,
-		src: hazel,
+		src: `${hazel}`,
 		facts: [
 			'Hazel has soooo much energy!',
 			'Hazel is highly intelligent.',
@@ -22,7 +27,7 @@ const dogs = [
 	{
 		name: 'Tubby',
 		age: 4,
-		src: tubby,
+		src: `${tubby}`,
 		facts: [
 			'Tubby is not the brightest dog',
 			'Tubby does not like walks or exercise.',
@@ -30,3 +35,5 @@ const dogs = [
 		],
 	},
 ];
+
+export default dogsData;
